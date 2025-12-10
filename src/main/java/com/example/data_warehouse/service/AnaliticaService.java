@@ -1,6 +1,6 @@
 package com.example.data_warehouse.service;
 
-import com.example.datawarehouse.dto.KpiResumenDto;
+import com.example.data_warehouse.dto.KpiResumenDto;
 import com.example.data_warehouse.dto.PuntoSerieTemporalDto;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;

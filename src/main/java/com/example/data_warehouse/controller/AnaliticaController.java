@@ -1,6 +1,6 @@
 package com.example.data_warehouse.controller;
 
-import com.example.datawarehouse.dto.KpiResumenDto;
+import com.example.data_warehouse.dto.KpiResumenDto;
 import com.example.data_warehouse.dto.PuntoSerieTemporalDto;
 import com.example.data_warehouse.service.AnaliticaService;
 import org.springframework.format.annotation.DateTimeFormat;
