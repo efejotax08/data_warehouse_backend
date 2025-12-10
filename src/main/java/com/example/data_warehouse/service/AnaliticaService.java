@@ -69,7 +69,7 @@ public class AnaliticaService {
     public KpiGlobalDto obtenerKpisGlobales() {
         return jdbcTemplate.queryForObject(
                 "SELECT clientes_con_compra, total_ganancias, " +
-                        "total_ventas, productos_diferentes FROM dw.vw_kpi_resumen",
+                        "total_ventas, total_productos_diferentes FROM dw.vw_kpi_resumen",
                 (rs, rowNum) -> new KpiGlobalDto(
                         rs.getLong("clientes_con_compra"),
                         (long) rs.getDouble("total_ganancias"),
