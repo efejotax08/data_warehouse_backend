@@ -1,7 +1,7 @@
 package com.example.data_warehouse.repository;
 
 
-import com.example.data_warehouse.dto.FctVenta;
+/*import com.example.data_warehouse.dto.FctVenta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -27,3 +27,4 @@ public interface FctVentasRepository extends JpaRepository<FctVenta, Long> {
     @Query("select count(distinct v.producto) from FctVenta v")
     long totalProductosDiferentes();
 }
+*/
