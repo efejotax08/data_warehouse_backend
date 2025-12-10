@@ -20,6 +20,7 @@ public class AnaliticaController {
     }
 
     // 1) Endpoint de KPIs agregados
+    @CrossOrigin(origins = "*")
     @GetMapping("/kpis")
     public KpiResumenDto obtenerKpis(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate desde,
@@ -29,6 +30,7 @@ public class AnaliticaController {
     }
 
     // 2) Endpoint de serie temporal de ventas diarias
+    @CrossOrigin(origins = "*")
     @GetMapping("/series/ventas-diarias")
     public List<PuntoSerieTemporalDto> obtenerSerieVentasDiarias(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate desde,

@@ -22,6 +22,7 @@ public class InfoController {
 
     // 1) Serie temporal de ventas por día
     // GET /api/analytics/series/ventas?desde=2025-01-01&hasta=2025-03-31&ciudad=Quito
+    @CrossOrigin(origins = "*")
     @GetMapping("/series/ventas")
     public List<VentaPorDiaDto> getVentasPorDia(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate desde,
@@ -33,6 +34,7 @@ public class InfoController {
 
     // 2) Serie temporal de clima por día
     // GET /api/analytics/series/clima?desde=2025-01-01&hasta=2025-03-31&ciudad=Quito
+    @CrossOrigin(origins = "*")
     @GetMapping("/series/clima")
     public List<ClimaPorDiaDto> getClimaPorDia(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate desde,
