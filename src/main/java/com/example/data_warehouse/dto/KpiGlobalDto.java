@@ -21,4 +21,4 @@ public class KpiGlobalDto {
     public double getTotalProdcutos() { return productosDiferentes; }
 }
 
-}
+
