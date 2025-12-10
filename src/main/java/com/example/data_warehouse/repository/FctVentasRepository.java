@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 public interface FctVentasRepository extends JpaRepository<FctVenta, Long> {
 
     // 1) Conteo de clientes que hayan realizado al menos una compra
-    @Query("select count(distinct v.skCliente) from FctVenta v")
+    @Query("select count(distinct v.sk_cliente) from FctVenta v")
     long countClientesConCompras();
 
     // 2) Total de ganancias (suma de total)

@@ -11,20 +11,17 @@ public class FctVenta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sk_venta")
-    private Long id;
+    private Long sk_venta;
 
     @Column(name = "id_venta_natural", nullable = false)
-    private Long idVentaNatural;
+    private Long id_venta_natural;
 
     @Column(name = "sk_cliente", nullable = false)
-    private Long skCliente;
+    private Long sk_cliente;
 
     @Column(name = "sk_fecha", nullable = false)
-    private Long skFecha;
+    private Long sk_fecha;
 
-
-    @Column(name = "sk_clima")
-    private Long skClima;
 
     @Column(name = "producto")
     private String producto;
