@@ -53,3 +53,9 @@ public interface AnalyticsRepository extends JpaRepository<FctVenta, Long> {
                                       @Param("desde") LocalDate desde,
                                       @Param("hasta") LocalDate hasta);
 }
+
+
+
+
+
+
