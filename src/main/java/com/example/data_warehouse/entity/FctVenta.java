@@ -1,7 +1,4 @@
 package com.example.data_warehouse.entity;
-
-
-
 import jakarta.persistence.*;
 
 @Entity
