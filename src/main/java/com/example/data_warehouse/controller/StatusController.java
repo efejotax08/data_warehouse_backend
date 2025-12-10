@@ -10,4 +10,11 @@ public class StatusController {
     public String status() {
         return "DW Backend OK";
     }
+
+    @GetMapping("/")
+    public String mostrarPagina() {
+        return "Hola, esta es la página de inicio.";
+    }
+
+
 }
