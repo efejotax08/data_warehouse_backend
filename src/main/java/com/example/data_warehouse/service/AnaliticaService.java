@@ -74,7 +74,7 @@ public class AnaliticaService {
                         rs.getLong("clientes_con_compra"),
                         (long) rs.getDouble("total_ganancias"),
                         rs.getLong("total_ventas"),
-                        rs.getLong("productos_diferentes")
+                        rs.getLong("total_productos_diferentes")
                 )
         );
     }
