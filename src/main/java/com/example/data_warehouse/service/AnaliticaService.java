@@ -1,5 +1,6 @@
 package com.example.data_warehouse.service;
 
+import com.example.data_warehouse.dto.KpiGlobalDto;
 import com.example.data_warehouse.dto.KpiResumenDto;
 import com.example.data_warehouse.dto.PuntoSerieTemporalDto;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -18,6 +19,7 @@ public class AnaliticaService {
     public AnaliticaService(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+
 
     public KpiResumenDto obtenerKpis(LocalDate desde, LocalDate hasta) {
         String sql = """
@@ -40,6 +42,7 @@ public class AnaliticaService {
                 ), desde, hasta);
     }
 
+
     public List<PuntoSerieTemporalDto> obtenerSerieVentasDiarias(LocalDate desde, LocalDate hasta) {
         String sql = """
             SELECT
@@ -61,4 +64,18 @@ public class AnaliticaService {
                 rs.getDouble("total_ventas")
         );
     }
+
+
+    public KpiGlobalDto obtenerKpisGlobales() {
+        return jdbcTemplate.queryForObject(
+                "SELECT clientes_con_compra, total_ganancias, total_ventas, productos_diferentes FROM vw_kpi_resumen",
+                (rs, rowNum) -> new KpiGlobalDto(
+                        rs.getLong("clientes_con_compra"),
+                        (long) rs.getDouble("total_ganancias"),
+                        rs.getLong("total_ventas"),
+                        rs.getLong("productos_diferentes")
+                )
+        );
+    }
+
 }

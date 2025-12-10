@@ -1,5 +1,6 @@
 package com.example.data_warehouse.controller;
 
+import com.example.data_warehouse.dto.KpiGlobalDto;
 import com.example.data_warehouse.dto.KpiResumenDto;
 import com.example.data_warehouse.dto.PuntoSerieTemporalDto;
 import com.example.data_warehouse.service.AnaliticaService;
@@ -38,4 +39,10 @@ public class AnaliticaController {
 
         return analiticaService.obtenerSerieVentasDiarias(desde, hasta);
     }
+
+    @GetMapping("/kpis-globales")
+    public KpiGlobalDto obtenerKpisGlobales() {
+        return analiticaService.obtenerKpisGlobales();
+    }
+
 }
